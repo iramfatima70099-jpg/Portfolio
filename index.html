@@ -1,541 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Iram Fatima | Frontend Developer</title>
-  <meta name="description" content="Portfolio of Iram Fatima — Frontend Developer, MCA Student and aspiring Full Stack Developer specializing in HTML, CSS, JavaScript and React." />
-  <meta name="author" content="Iram Fatima" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iram Fatima | Portfolio</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
 
-  <!-- Custom cursor glow -->
-  <div class="cursor-glow" aria-hidden="true"></div>
+<!-- Loading Screen -->
+<div id="loader">
+    <h1>Iram Fatima</h1>
+</div>
 
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+<!-- Navbar -->
 
-  <!-- ============ NAVBAR ============ -->
-  <header class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#home" class="logo" aria-label="Iram Fatima — Home">
-        <span class="logo-mark">IF</span>
-        <span class="logo-text">Iram<em>Fatima</em></span>
-      </a>
+<header>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#home" class="nav-link active" data-section="home">Home</a>
-        <a href="#about" class="nav-link" data-section="about">About</a>
-        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
-        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
-        <a href="#education" class="nav-link" data-section="education">Education</a>
-        <a href="#internship" class="nav-link" data-section="internship">Internship</a>
-        <a href="#certificates" class="nav-link" data-section="certificates">Certificates</a>
-        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
-      </nav>
+<nav>
 
-      <div class="nav-actions">
-        <a href="#contact" class="btn btn-small btn-primary">Let's Talk</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
+<div class="logo">
+Iram Fatima
+</div>
 
-  <main id="top">
+<ul class="nav-links">
 
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="home">
-      <div class="hero-bg" aria-hidden="true">
-        <div class="gradient-mesh"></div>
-        <div class="grid-overlay"></div>
-        <span class="float-shape shape-1"></span>
-        <span class="float-shape shape-2"></span>
-        <span class="float-shape shape-3"></span>
-        <span class="float-shape shape-4"></span>
-        <span class="float-shape shape-5"></span>
-      </div>
+<li><a href="#home">Home</a></li>
 
-      <div class="container hero-inner">
-        <p class="hero-eyebrow reveal" data-anim="fade-up"><span class="dot-pulse"></span> Available for opportunities</p>
+<li><a href="#about">About</a></li>
 
-        <h1 class="hero-name reveal" data-anim="fade-up" data-delay="1">
-          Hi, I'm <span class="gradient-text">Iram Fatima</span>
-        </h1>
+<li><a href="#education">Education</a></li>
 
-        <h2 class="hero-title reveal" data-anim="fade-up" data-delay="2">
-          <span id="typedText" class="typed-text"></span><span class="cursor-blink">|</span>
-        </h2>
+<li><a href="#skills">Skills</a></li>
 
-        <p class="hero-desc reveal" data-anim="fade-up" data-delay="3">
-          I build responsive and modern web applications using HTML, CSS and JavaScript
-          while continuously learning new technologies.
-        </p>
+<li><a href="#projects">Projects</a></li>
 
-        <div class="hero-actions reveal" data-anim="fade-up" data-delay="4">
-          <a href="#projects" class="btn btn-primary ripple">
-            <i class="fa-solid fa-diagram-project"></i> View Projects
-          </a>
-          <a href="resume.pdf" download class="btn btn-outline ripple">
-            <i class="fa-solid fa-download"></i> Download Resume
-          </a>
-          <a href="#contact" class="btn btn-ghost ripple">
-            <i class="fa-solid fa-paper-plane"></i> Contact Me
-          </a>
-        </div>
+<li><a href="#internship">Internship</a></li>
 
-        <div class="hero-socials reveal" data-anim="fade-up" data-delay="5">
-          <a href="https://github.com/iramfatima70099-jpg" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/iram-fatima-34167b331" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="mailto:iramfatima70099@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-      </div>
+<li><a href="#certificates">Certificates</a></li>
 
-      <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
-        <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
-        <span class="scroll-label">Scroll</span>
-      </a>
-    </section>
+<li><a href="#contact">Contact</a></li>
 
-    <!-- ============ ABOUT ============ -->
-    <section class="section" id="about">
-      <div class="container">
-        <p class="section-eyebrow reveal" data-anim="fade-up">Get to know me</p>
-        <h2 class="section-title reveal" data-anim="fade-up">About <span class="gradient-text">Me</span></h2>
+</ul>
 
-        <div class="about-grid">
-          <div class="about-visual reveal" data-anim="fade-right">
-            <div class="about-card glass">
-              <div class="about-glow"></div>
-              <div class="about-avatar">
-                <i class="fa-solid fa-code"></i>
-              </div>
-              <ul class="about-stats">
-                <li>
-                  <span class="stat-num" data-count="8.62">0</span>
-                  <span class="stat-label">MCA CGPA</span>
-                </li>
-                <li>
-                  <span class="stat-num" data-count="4">0</span>
-                  <span class="stat-label">Projects Built</span>
-                </li>
-                <li>
-                  <span class="stat-num" data-count="6">0</span>
-                  <span class="stat-label">Weeks Internship</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+<div id="theme-toggle">
+<i class="fa-solid fa-moon"></i>
+</div>
 
-          <div class="about-content reveal" data-anim="fade-left">
-            <h3>Frontend Developer &amp; MCA Student</h3>
-            <p>
-              I'm a dedicated Frontend Developer and Master of Computer Applications (MCA) student with a strong
-              foundation in web technologies and problem-solving. I specialize in crafting responsive, accessible
-              and visually engaging web applications using HTML, CSS and JavaScript, with growing expertise in React.
-            </p>
-            <p>
-              My academic background in Computer Science, combined with hands-on project experience and an internship
-              in web development, has equipped me with practical skills in building real-world applications — from
-              database-driven management systems to interactive browser games. I'm passionate about clean code,
-              intuitive interfaces and continuously learning emerging technologies to grow into a well-rounded
-              Full Stack Developer.
-            </p>
+</nav>
 
-            <div class="about-info">
-              <div class="info-item">
-                <i class="fa-solid fa-graduation-cap"></i>
-                <div><span>Education</span><p>MCA — Quantum University</p></div>
-              </div>
-              <div class="info-item">
-                <i class="fa-solid fa-briefcase"></i>
-                <div><span>Internship</span><p>Web Development — InternPe</p></div>
-              </div>
-              <div class="info-item">
-                <i class="fa-solid fa-location-dot"></i>
-                <div><span>Focus</span><p>Frontend &amp; Full Stack Development</p></div>
-              </div>
-              <div class="info-item">
-                <i class="fa-solid fa-envelope"></i>
-                <div><span>Email</span><p>iramfatima70099@gmail.com</p></div>
-              </div>
-            </div>
+</header>
 
-            <a href="resume.pdf" download class="btn btn-primary ripple">
-              <i class="fa-solid fa-download"></i> Download Resume
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- Hero Section -->
 
-    <!-- ============ SKILLS ============ -->
-    <section class="section section-alt" id="skills">
-      <div class="container">
-        <p class="section-eyebrow reveal" data-anim="fade-up">What I work with</p>
-        <h2 class="section-title reveal" data-anim="fade-up">My <span class="gradient-text">Skills</span></h2>
-        <p class="section-sub reveal" data-anim="fade-up">
-          A toolkit built through coursework, projects and continuous self-learning.
-        </p>
+<section id="home" class="hero">
 
-        <div class="skills-grid">
-          <div class="skill-card glass reveal" data-anim="fade-up" data-delay="1">
-            <div class="skill-icon" style="--c1:#f89820;--c2:#5382a1;"><i class="fa-brands fa-java"></i></div>
-            <h3>Java</h3>
-            <div class="skill-bar"><span style="--level:80%"></span></div>
-          </div>
+<div class="hero-text">
 
-          <div class="skill-card glass reveal" data-anim="fade-up" data-delay="2">
-            <div class="skill-icon" style="--c1:#3776ab;--c2:#ffd43b;"><i class="fa-brands fa-python"></i></div>
-            <h3>Python</h3>
-            <div class="skill-bar"><span style="--level:75%"></span></div>
-          </div>
+<h3>Hello, I'm</h3>
 
-          <div class="skill-card glass reveal" data-anim="fade-up" data-delay="3">
-            <div class="skill-icon" style="--c1:#00599c;--c2:#659ad2;"><i class="fa-solid fa-c"></i></div>
-            <h3>C++</h3>
-            <div class="skill-bar"><span style="--level:70%"></span></div>
-          </div>
+<h1>Iram Fatima</h1>
 
-          <div class="skill-card glass reveal" data-anim="fade-up" data-delay="4">
-            <div class="skill-icon" style="--c1:#e34f26;--c2:#f9a03c;"><i class="fa-brands fa-html5"></i></div>
-            <h3>HTML5</h3>
-            <div class="skill-bar"><span style="--level:95%"></span></div>
-          </div>
+<h2><span id="typing"></span></h2>
 
-          <div class="skill-card glass reveal" data-anim="fade-up" data-delay="5">
-            <div class="skill-icon" style="--c1:#264de4;--c2:#2965f1;"><i class="fa-brands fa-css3-alt"></i></div>
-            <h3>CSS3</h3>
-            <div class="skill-bar"><span style="--level:92%"></span></div>
-          </div>
+<p>
 
-          <div class="skill-card glass reveal" data-anim="fade-up" data-delay="6">
-            <div class="skill-icon" style="--c1:#f7df1e;--c2:#f0db4f;"><i class="fa-brands fa-js"></i></div>
-            <h3>JavaScript</h3>
-            <div class="skill-bar"><span style="--level:88%"></span></div>
-          </div>
+Currently pursuing MCA at Quantum University.
+Passionate about Java, Frontend Development,
+and creating beautiful responsive websites.
 
-          <div class="skill-card glass reveal" data-anim="fade-up" data-delay="1">
-            <div class="skill-icon" style="--c1:#61dafb;--c2:#21a1c4;"><i class="fa-brands fa-react"></i></div>
-            <h3>React</h3>
-            <div class="skill-bar"><span style="--level:65%"></span></div>
-          </div>
+</p>
 
-          <div class="skill-card glass reveal" data-anim="fade-up" data-delay="2">
-            <div class="skill-icon" style="--c1:#4479a1;--c2:#00758f;"><i class="fa-solid fa-database"></i></div>
-            <h3>MySQL</h3>
-            <div class="skill-bar"><span style="--level:78%"></span></div>
-          </div>
+<div class="buttons">
 
-          <div class="skill-card glass reveal" data-anim="fade-up" data-delay="3">
-            <div class="skill-icon" style="--c1:#f05032;--c2:#f34f29;"><i class="fa-brands fa-git-alt"></i></div>
-            <h3>Git</h3>
-            <div class="skill-bar"><span style="--level:82%"></span></div>
-          </div>
+<a href="#projects" class="btn">
+View Projects
+</a>
 
-          <div class="skill-card glass reveal" data-anim="fade-up" data-delay="4">
-            <div class="skill-icon" style="--c1:#ffffff;--c2:#8b5cf6;"><i class="fa-brands fa-github"></i></div>
-            <h3>GitHub</h3>
-            <div class="skill-bar"><span style="--level:85%"></span></div>
-          </div>
+<a href="resume.pdf"
+class="btn btn2"
+download>
 
-          <div class="skill-card glass reveal" data-anim="fade-up" data-delay="5">
-            <div class="skill-icon" style="--c1:#007acc;--c2:#3b82f6;"><i class="fa-solid fa-code"></i></div>
-            <h3>VS Code</h3>
-            <div class="skill-bar"><span style="--level:90%"></span></div>
-          </div>
-        </div>
-      </div>
-    </section>
+Download Resume
 
-    <!-- ============ PROJECTS ============ -->
-    <section class="section" id="projects">
-      <div class="container">
-        <p class="section-eyebrow reveal" data-anim="fade-up">Selected work</p>
-        <h2 class="section-title reveal" data-anim="fade-up">My <span class="gradient-text">Projects</span></h2>
-        <p class="section-sub reveal" data-anim="fade-up">
-          A few things I've built while learning to turn ideas into working software.
-        </p>
+</a>
 
-        <div class="projects-grid">
+</div>
 
-          <article class="project-card glass reveal" data-anim="fade-up" data-delay="1">
-            <div class="project-media">
-              <div class="project-thumb thumb-1"><i class="fa-solid fa-scissors"></i></div>
-              <div class="project-tags-float">
-                <span>HTML</span><span>CSS</span><span>JS</span><span>MySQL</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <h3>Salon Management System</h3>
-              <p>A management platform to handle salon appointments, services and customer records, built with a
-                focus on clean data handling and a simple booking workflow.</p>
-              <div class="project-tech">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>MySQL</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/iramfatima70099-jpg" target="_blank" rel="noopener" class="btn btn-small btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://iramfatima70099-jpg.github.io/Portfolio/" target="_blank" rel="noopener" class="btn btn-small btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-              </div>
-            </div>
-          </article>
+</div>
 
-          <article class="project-card glass reveal" data-anim="fade-up" data-delay="2">
-            <div class="project-media">
-              <div class="project-thumb thumb-2"><i class="fa-solid fa-cart-shopping"></i></div>
-              <div class="project-tags-float">
-                <span>HTML</span><span>CSS</span><span>JS</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <h3>E-Commerce Website</h3>
-              <p>A responsive online store front with product listings, cart functionality and a clean checkout
-                flow, designed to feel fast and intuitive on any device.</p>
-              <div class="project-tech">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/iramfatima70099-jpg" target="_blank" rel="noopener" class="btn btn-small btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://iramfatima70099-jpg.github.io/Portfolio/" target="_blank" rel="noopener" class="btn btn-small btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-              </div>
-            </div>
-          </article>
+<div class="hero-image">
 
-          <article class="project-card glass reveal" data-anim="fade-up" data-delay="3">
-            <div class="project-media">
-              <div class="project-thumb thumb-3"><i class="fa-solid fa-list-check"></i></div>
-              <div class="project-tags-float">
-                <span>HTML</span><span>CSS</span><span>JS</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <h3>To-Do List</h3>
-              <p>A productivity app to add, complete and organize daily tasks, with local state persistence and
-                subtle animations for a satisfying user experience.</p>
-              <div class="project-tech">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/iramfatima70099-jpg" target="_blank" rel="noopener" class="btn btn-small btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://iramfatima70099-jpg.github.io/Portfolio/" target="_blank" rel="noopener" class="btn btn-small btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-              </div>
-            </div>
-          </article>
+<img src="images/profile.jpg" alt="Profile">
 
-          <article class="project-card glass reveal" data-anim="fade-up" data-delay="4">
-            <div class="project-media">
-              <div class="project-thumb thumb-4"><i class="fa-solid fa-circle-dot"></i></div>
-              <div class="project-tags-float">
-                <span>HTML</span><span>CSS</span><span>JS</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <h3>Connect 4 Game</h3>
-              <p>A two-player browser game rebuilding the classic Connect 4 with win-detection logic, smooth
-                piece-drop animation and a fully interactive grid.</p>
-              <div class="project-tech">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/iramfatima70099-jpg" target="_blank" rel="noopener" class="btn btn-small btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://iramfatima70099-jpg.github.io/Portfolio/" target="_blank" rel="noopener" class="btn btn-small btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-              </div>
-            </div>
-          </article>
+</div>
 
-        </div>
-      </div>
-    </section>
+</section>
 
-    <!-- ============ EDUCATION ============ -->
-    <section class="section section-alt" id="education">
-      <div class="container">
-        <p class="section-eyebrow reveal" data-anim="fade-up">Academic journey</p>
-        <h2 class="section-title reveal" data-anim="fade-up">My <span class="gradient-text">Education</span></h2>
+<!-- About -->
 
-        <div class="timeline">
-          <div class="timeline-line" aria-hidden="true"></div>
+<section id="about">
 
-          <div class="timeline-item reveal" data-anim="fade-right">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass">
-              <span class="timeline-tag">Postgraduate</span>
-              <h3>Master of Computer Applications (MCA)</h3>
-              <p class="timeline-org"><i class="fa-solid fa-building-columns"></i> Quantum University</p>
-              <p class="timeline-grade"><i class="fa-solid fa-star"></i> CGPA: 8.62 / 10</p>
-              <p>Advanced coursework in software development, data structures and modern web technologies, with
-                applied project work in full stack development.</p>
-            </div>
-          </div>
+<h2 class="heading">About Me</h2>
 
-          <div class="timeline-item reveal" data-anim="fade-left">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass">
-              <span class="timeline-tag">Undergraduate</span>
-              <h3>B.Sc. Computer Science</h3>
-              <p class="timeline-org"><i class="fa-solid fa-building-columns"></i> Undergraduate Institution</p>
-              <p class="timeline-grade"><i class="fa-solid fa-star"></i> CGPA: 6.5 / 10</p>
-              <p>Built a strong foundation in programming fundamentals, computer science theory and problem-solving
-                that shaped my transition into web development.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="about-box">
 
-    <!-- ============ INTERNSHIP ============ -->
-    <section class="section" id="internship">
-      <div class="container">
-        <p class="section-eyebrow reveal" data-anim="fade-up">Real-world experience</p>
-        <h2 class="section-title reveal" data-anim="fade-up">My <span class="gradient-text">Internship</span></h2>
+<p>
 
-        <div class="internship-card glass reveal" data-anim="fade-up">
-          <div class="internship-icon"><i class="fa-solid fa-briefcase"></i></div>
-          <div class="internship-content">
-            <div class="internship-head">
-              <h3>Web Development Intern</h3>
-              <span class="internship-duration"><i class="fa-regular fa-clock"></i> 6 Weeks</span>
-            </div>
-            <p class="internship-org">InternPe</p>
-            <p>
-              During my six-week internship at InternPe, I worked on real web development tasks that strengthened
-              my practical skills in HTML, CSS and JavaScript. I collaborated on building responsive interfaces,
-              debugging existing code and translating design requirements into functional web pages. This experience
-              sharpened my understanding of development workflows, version control practices and writing clean,
-              maintainable code within a professional environment.
-            </p>
-            <div class="internship-skills">
-              <span>Responsive Design</span>
-              <span>Debugging</span>
-              <span>Version Control</span>
-              <span>Team Collaboration</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+I'm Iram Fatima, an MCA student at Quantum University.
+I enjoy building responsive websites using HTML, CSS and JavaScript.
 
-    <!-- ============ CERTIFICATES ============ -->
-    <section class="section section-alt" id="certificates">
-      <div class="container">
-        <p class="section-eyebrow reveal" data-anim="fade-up">Verified learning</p>
-        <h2 class="section-title reveal" data-anim="fade-up">My <span class="gradient-text">Certificates</span></h2>
+Currently I'm learning Java, improving my problem solving skills,
+and preparing myself for Full Stack Development.
 
-        <div class="cert-grid">
-          <div class="cert-card glass reveal" data-anim="fade-up" data-delay="1">
-            <div class="cert-icon"><i class="fa-brands fa-microsoft"></i></div>
-            <h3>Introduction to Web Development</h3>
-            <p>Microsoft</p>
-            <a href="#" target="_blank" rel="noopener" class="btn btn-small btn-outline">
-              <i class="fa-solid fa-certificate"></i> View Credential
-            </a>
-          </div>
+</p>
 
-          <div class="cert-card glass reveal" data-anim="fade-up" data-delay="2">
-            <div class="cert-icon"><i class="fa-brands fa-google"></i></div>
-            <h3>Introduction to AI</h3>
-            <p>Google</p>
-            <a href="#" target="_blank" rel="noopener" class="btn btn-small btn-outline">
-              <i class="fa-solid fa-certificate"></i> View Credential
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+</div>
 
-    <!-- ============ CONTACT ============ -->
-    <section class="section" id="contact">
-      <div class="container">
-        <p class="section-eyebrow reveal" data-anim="fade-up">Let's connect</p>
-        <h2 class="section-title reveal" data-anim="fade-up">Get In <span class="gradient-text">Touch</span></h2>
-        <p class="section-sub reveal" data-anim="fade-up">
-          Have an opportunity, project or just want to say hi? My inbox is always open.
-        </p>
+</section>
 
-        <div class="contact-grid">
-          <div class="contact-info reveal" data-anim="fade-right">
-            <a class="contact-item glass" href="mailto:iramfatima70099@gmail.com">
-              <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
-              <div><span>Email</span><p>iramfatima70099@gmail.com</p></div>
-            </a>
-            <a class="contact-item glass" href="https://www.linkedin.com/in/iram-fatima-34167b331" target="_blank" rel="noopener">
-              <span class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></span>
-              <div><span>LinkedIn</span><p>iram-fatima-34167b331</p></div>
-            </a>
-            <a class="contact-item glass" href="https://github.com/iramfatima70099-jpg" target="_blank" rel="noopener">
-              <span class="contact-icon"><i class="fa-brands fa-github"></i></span>
-              <div><span>GitHub</span><p>iramfatima70099-jpg</p></div>
-            </a>
-            <a class="contact-item glass" href="https://iramfatima70099-jpg.github.io/Portfolio/" target="_blank" rel="noopener">
-              <span class="contact-icon"><i class="fa-solid fa-globe"></i></span>
-              <div><span>Portfolio</span><p>iramfatima70099-jpg.github.io/Portfolio</p></div>
-            </a>
-          </div>
+<!-- Education -->
 
-          <form class="contact-form glass reveal" data-anim="fade-left" id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <input type="text" id="name" name="name" required placeholder=" " />
-                <label for="name">Your Name</label>
-              </div>
-              <div class="form-group">
-                <input type="email" id="email" name="email" required placeholder=" " />
-                <label for="email">Your Email</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="text" id="subject" name="subject" required placeholder=" " />
-              <label for="subject">Subject</label>
-            </div>
-            <div class="form-group">
-              <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
-              <label for="message">Your Message</label>
-            </div>
-            <button type="submit" class="btn btn-primary ripple full-width">
-              <i class="fa-solid fa-paper-plane"></i> Send Message
-            </button>
-            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-          </form>
-        </div>
-      </div>
-    </section>
+<section id="education">
 
-  </main>
+<h2 class="heading">Education</h2>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="logo-mark">IF</span>
-        <p>Building thoughtful, modern web experiences — one project at a time.</p>
-      </div>
+<div class="timeline">
 
-      <div class="footer-socials">
-        <a href="https://github.com/iramfatima70099-jpg" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/iram-fatima-34167b331" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="mailto:iramfatima70099@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://iramfatima70099-jpg.github.io/Portfolio/" target="_blank" rel="noopener" aria-label="Portfolio Website"><i class="fa-solid fa-globe"></i></a>
-      </div>
+<div class="card">
+<h3>MCA</h3>
+<p>Quantum University</p>
+<span>CGPA : 8.62</span>
+</div>
 
-      <p class="footer-copy">&copy; <span id="year"></span> Iram Fatima. All rights reserved.</p>
-    </div>
-  </footer>
+<div class="card">
+<h3>B.Sc Computer Science</h3>
+<p>Chinmaya Degree College</p>
+<span>CGPA : 6.5</span>
+</div>
 
-  <button id="backToTop" class="back-to-top" aria-label="Back to top">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
+<div class="card">
+<h3>Class XII</h3>
+<p>GGIC Haridwar</p>
+<span>71%</span>
+</div>
 
-  <script src="script.js"></script>
+<div class="card">
+<h3>Class X</h3>
+<p>GGIC Haridwar</p>
+<span>70%</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- Skills -->
+
+<section id="skills">
+
+<h2 class="heading">Skills</h2>
+
+<div class="skill-container">
+
+<div class="skill">Java</div>
+
+<div class="skill">Python</div>
+
+<div class="skill">C++</div>
+
+<div class="skill">HTML</div>
+
+<div class="skill">CSS</div>
+
+<div class="skill">JavaScript</div>
+
+<div class="skill">MySQL</div>
+
+<div class="skill">Git</div>
+
+<div class="skill">GitHub</div>
+
+<div class="skill">VS Code</div>
+
+</div>
+
+</section>
+
+<!-- Projects -->
+
+<section id="projects">
+
+<h2 class="heading">Projects</h2>
+
+<div class="project-grid">
+
+<div class="project-card">
+
+<h3>Salon Management System</h3>
+
+<p>Responsive salon website using HTML CSS JavaScript.</p>
+
+<a href="#">Live Demo</a>
+
+<a href="#">GitHub</a>
+
+</div>
+
+<div class="project-card">
+
+<h3>E-Commerce Website</h3>
+
+<p>Modern shopping website with attractive UI.</p>
+
+<a href="#">Live Demo</a>
+
+<a href="#">GitHub</a>
+
+</div>
+
+<div class="project-card">
+
+<h3>To-Do List</h3>
+
+<p>Task management application using Local Storage.</p>
+
+<a href="#">Live Demo</a>
+
+<a href="#">GitHub</a>
+
+</div>
+
+<div class="project-card">
+
+<h3>Connect 4 Game</h3>
+
+<p>Interactive browser game built using JavaScript.</p>
+
+<a href="#">Live Demo</a>
+
+<a href="#">GitHub</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Internship -->
+
+<section id="internship">
+
+<h2 class="heading">Internship</h2>
+
+<div class="card">
+
+<h3>InternPe</h3>
+
+<p>Web Development Intern</p>
+
+<p>Duration : 6 Weeks</p>
+
+<p>
+
+Worked on frontend web development projects
+using HTML, CSS and JavaScript.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- Certificates -->
+
+<section id="certificates">
+
+<h2 class="heading">
+
+Certifications
+
+</h2>
+
+<div class="project-grid">
+
+<div class="project-card">
+
+<h3>Microsoft Introduction to Web Development</h3>
+
+<p>Coursera</p>
+
+</div>
+
+<div class="project-card">
+
+<h3>Google Introduction to AI</h3>
+
+<p>Coursera</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<h2 class="heading">
+
+Contact Me
+
+</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Message"></textarea>
+
+<button>
+
+Send Message
+
+</button>
+
+</form>
+
+<div class="contact-info">
+
+<p>
+
+<i class="fa-solid fa-envelope"></i>
+
+iramfatima70099@gmail.com
+
+</p>
+
+<p>
+
+<i class="fa-solid fa-phone"></i>
+
++91 7417818329
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Iram Fatima | All Rights Reserved
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
