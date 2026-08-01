@@ -3,30 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iram Fatima | Portfolio</title>
+    <title>Iram Fatima | Java Developer Portfolio</title>
+
+    <meta name="description" content="Iram Fatima - MCA Student | Java Developer | Frontend Developer">
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
 
-<!-- Loading Screen -->
-<div id="loader">
-    <h1>Iram Fatima</h1>
-</div>
-
-<!-- Navbar -->
+<!--======================
+NAVBAR
+=======================-->
 
 <header>
 
-<nav>
+<nav class="navbar">
 
 <div class="logo">
-Iram Fatima
+
+IF.
+
 </div>
 
 <ul class="nav-links">
@@ -35,59 +42,95 @@ Iram Fatima
 
 <li><a href="#about">About</a></li>
 
-<li><a href="#education">Education</a></li>
-
 <li><a href="#skills">Skills</a></li>
 
 <li><a href="#projects">Projects</a></li>
 
-<li><a href="#internship">Internship</a></li>
-
-<li><a href="#certificates">Certificates</a></li>
+<li><a href="#education">Education</a></li>
 
 <li><a href="#contact">Contact</a></li>
 
 </ul>
 
-<div id="theme-toggle">
-<i class="fa-solid fa-moon"></i>
+<div class="menu-btn">
+
+<i class="fa-solid fa-bars"></i>
+
 </div>
 
 </nav>
 
 </header>
 
-<!-- Hero Section -->
+<!--======================
+HERO
+=======================-->
 
-<section id="home" class="hero">
+<section class="hero" id="home">
 
-<div class="hero-text">
+<div class="hero-content">
 
-<h3>Hello, I'm</h3>
+<p class="hello">
 
-<h1>Iram Fatima</h1>
-
-<h2><span id="typing"></span></h2>
-
-<p>
-
-Currently pursuing MCA at Quantum University.
-Passionate about Java, Frontend Development,
-and creating beautiful responsive websites.
+Hello, I'm
 
 </p>
 
-<div class="buttons">
+<h1>
 
-<a href="#projects" class="btn">
-View Projects
-</a>
+Iram Fatima
 
-<a href="resume.pdf"
-class="btn btn2"
-download>
+</h1>
+
+<h2>
+
+<span id="typing"></span>
+
+</h2>
+
+<p class="hero-text">
+
+I am currently pursuing my Master of Computer Applications (MCA) at Quantum University, Roorkee.
+
+I enjoy building responsive web applications using HTML, CSS and JavaScript while continuously improving my Java programming and problem-solving skills.
+
+My goal is to become a professional Full Stack Software Engineer.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="resume.pdf" download class="btn">
 
 Download Resume
+
+</a>
+
+<a href="#projects" class="btn btn-outline">
+
+View Projects
+
+</a>
+
+</div>
+
+<div class="social-icons">
+
+<a href="https://github.com/iramfatima70099-jpg" target="_blank">
+
+<i class="fab fa-github"></i>
+
+</a>
+
+<a href="https://www.linkedin.com/in/iram-fatima-34167b331" target="_blank">
+
+<i class="fab fa-linkedin"></i>
+
+</a>
+
+<a href="mailto:iramfatima70099@gmail.com">
+
+<i class="fas fa-envelope"></i>
 
 </a>
 
@@ -97,212 +140,169 @@ Download Resume
 
 <div class="hero-image">
 
-<img src="images/profile.jpg" alt="Profile">
+<div class="circle">
+
+<div class="circle2">
+
+<h1>IF</h1>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- About -->
+<!--======================
+ABOUT
+=======================-->
 
 <section id="about">
 
-<h2 class="heading">About Me</h2>
+<div class="section-title">
 
-<div class="about-box">
+<h2>
+
+About Me
+
+</h2>
+
+</div>
+
+<div class="about-container">
+
+<div class="about-card">
+
+<h3>
+
+Who am I?
+
+</h3>
 
 <p>
 
-I'm Iram Fatima, an MCA student at Quantum University.
-I enjoy building responsive websites using HTML, CSS and JavaScript.
+I'm Iram Fatima, an MCA student from Quantum University with a passion for Java programming and modern web development.
 
-Currently I'm learning Java, improving my problem solving skills,
-and preparing myself for Full Stack Development.
+I enjoy creating responsive websites and continuously learning new technologies to become a skilled Full Stack Developer.
 
 </p>
 
 </div>
 
-</section>
+<div class="about-card">
 
-<!-- Education -->
+<h3>
 
-<section id="education">
+Career Objective
 
-<h2 class="heading">Education</h2>
+</h3>
 
-<div class="timeline">
+<p>
 
-<div class="card">
-<h3>MCA</h3>
-<p>Quantum University</p>
-<span>CGPA : 8.62</span>
-</div>
+To obtain an opportunity where I can apply my technical knowledge, enhance my development skills and contribute to building impactful software solutions.
 
-<div class="card">
-<h3>B.Sc Computer Science</h3>
-<p>Chinmaya Degree College</p>
-<span>CGPA : 6.5</span>
-</div>
+</p>
 
-<div class="card">
-<h3>Class XII</h3>
-<p>GGIC Haridwar</p>
-<span>71%</span>
-</div>
-
-<div class="card">
-<h3>Class X</h3>
-<p>GGIC Haridwar</p>
-<span>70%</span>
 </div>
 
 </div>
 
 </section>
 
-<!-- Skills -->
+<!--======================
+SKILLS
+=======================-->
 
 <section id="skills">
 
-<h2 class="heading">Skills</h2>
+<div class="section-title">
 
-<div class="skill-container">
+<h2>
 
-<div class="skill">Java</div>
-
-<div class="skill">Python</div>
-
-<div class="skill">C++</div>
-
-<div class="skill">HTML</div>
-
-<div class="skill">CSS</div>
-
-<div class="skill">JavaScript</div>
-
-<div class="skill">MySQL</div>
-
-<div class="skill">Git</div>
-
-<div class="skill">GitHub</div>
-
-<div class="skill">VS Code</div>
-
-</div>
-
-</section>
-
-<!-- Projects -->
-
-<section id="projects">
-
-<h2 class="heading">Projects</h2>
-
-<div class="project-grid">
-
-<div class="project-card">
-
-<h3>Salon Management System</h3>
-
-<p>Responsive salon website using HTML CSS JavaScript.</p>
-
-<a href="#">Live Demo</a>
-
-<a href="#">GitHub</a>
-
-</div>
-
-<div class="project-card">
-
-<h3>E-Commerce Website</h3>
-
-<p>Modern shopping website with attractive UI.</p>
-
-<a href="#">Live Demo</a>
-
-<a href="#">GitHub</a>
-
-</div>
-
-<div class="project-card">
-
-<h3>To-Do List</h3>
-
-<p>Task management application using Local Storage.</p>
-
-<a href="#">Live Demo</a>
-
-<a href="#">GitHub</a>
-
-</div>
-
-<div class="project-card">
-
-<h3>Connect 4 Game</h3>
-
-<p>Interactive browser game built using JavaScript.</p>
-
-<a href="#">Live Demo</a>
-
-<a href="#">GitHub</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Internship -->
-
-<section id="internship">
-
-<h2 class="heading">Internship</h2>
-
-<div class="card">
-
-<h3>InternPe</h3>
-
-<p>Web Development Intern</p>
-
-<p>Duration : 6 Weeks</p>
-
-<p>
-
-Worked on frontend web development projects
-using HTML, CSS and JavaScript.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- Certificates -->
-
-<section id="certificates">
-
-<h2 class="heading">
-
-Certifications
+Technical Skills
 
 </h2>
 
-<div class="project-grid">
+</div>
 
-<div class="project-card">
+<div class="skills-grid">
 
-<h3>Microsoft Introduction to Web Development</h3>
+<div class="skill-card">
 
-<p>Coursera</p>
+<i class="fab fa-java"></i>
+
+<h3>Java</h3>
 
 </div>
 
-<div class="project-card">
+<div class="skill-card">
 
-<h3>Google Introduction to AI</h3>
+<i class="fab fa-python"></i>
 
-<p>Coursera</p>
+<h3>Python</h3>
+
+</div>
+
+<div class="skill-card">
+
+<h3>C++</h3>
+
+</div>
+
+<div class="skill-card">
+
+<i class="fab fa-html5"></i>
+
+<h3>HTML</h3>
+
+</div>
+
+<div class="skill-card">
+
+<i class="fab fa-css3-alt"></i>
+
+<h3>CSS</h3>
+
+</div>
+
+<div class="skill-card">
+
+<i class="fab fa-js"></i>
+
+<h3>JavaScript</h3>
+
+</div>
+
+<div class="skill-card">
+
+<i class="fas fa-database"></i>
+
+<h3>MySQL</h3>
+
+</div>
+
+<div class="skill-card">
+
+<i class="fab fa-git-alt"></i>
+
+<h3>Git</h3>
+
+</div>
+
+<div class="skill-card">
+
+<i class="fab fa-github"></i>
+
+<h3>GitHub</h3>
+
+</div>
+
+<div class="skill-card">
+
+<i class="fas fa-code"></i>
+
+<h3>VS Code</h3>
 
 </div>
 
@@ -310,63 +310,15 @@ Certifications
 
 </section>
 
-<!-- Contact -->
-
-<section id="contact">
-
-<h2 class="heading">
-
-Contact Me
-
-</h2>
-
-<form>
-
-<input type="text" placeholder="Your Name">
-
-<input type="email" placeholder="Email">
-
-<textarea placeholder="Message"></textarea>
-
-<button>
-
-Send Message
-
-</button>
-
-</form>
-
-<div class="contact-info">
-
-<p>
-
-<i class="fa-solid fa-envelope"></i>
-
-iramfatima70099@gmail.com
-
-</p>
-
-<p>
-
-<i class="fa-solid fa-phone"></i>
-
-+91 7417818329
-
-</p>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>
-
-© 2026 Iram Fatima | All Rights Reserved
-
-</p>
-
-</footer>
+<!--======================
+NEXT PART
+Projects
+Education
+Internship
+Certificates
+Contact
+Footer
+=======================-->
 
 <script src="script.js"></script>
 
