@@ -1,282 +1,291 @@
-// =======================
-// Loading Screen
-// =======================
+// ==========================
+// TYPING ANIMATION
+// ==========================
 
-window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
-
-    setTimeout(() => {
-        loader.style.opacity = "0";
-        loader.style.visibility = "hidden";
-        loader.style.transition = "0.6s";
-    }, 1200);
-});
-
-// =======================
-// Typing Animation
-// =======================
+const typing = document.getElementById("typing");
 
 const words = [
-    "Java Developer",
-    "Frontend Developer",
-    "MCA Student",
-    "Future Full Stack Developer"
+  "Java Developer",
+  "Frontend Developer",
+  "MCA Student",
+  "Aspiring Full Stack Developer"
 ];
 
 let wordIndex = 0;
 let charIndex = 0;
 let deleting = false;
 
-const typing = document.getElementById("typing");
+function typeEffect() {
 
-function typeEffect(){
+    let current = words[wordIndex];
 
-    const current = words[wordIndex];
+    if (!deleting) {
 
-    if(!deleting){
-
-        typing.textContent = current.substring(0,charIndex++);
-
-        if(charIndex > current.length){
+        typing.textContent = current.substring(0, charIndex++);
+        
+        if (charIndex > current.length) {
 
             deleting = true;
 
-            setTimeout(typeEffect,1500);
+            setTimeout(typeEffect, 1500);
 
             return;
+
         }
 
-    }else{
+    }
 
-        typing.textContent = current.substring(0,charIndex--);
+    else {
 
-        if(charIndex < 0){
+        typing.textContent = current.substring(0, charIndex--);
+
+        if (charIndex < 0) {
 
             deleting = false;
 
             wordIndex++;
 
-            if(wordIndex == words.length){
+            if (wordIndex >= words.length) {
 
                 wordIndex = 0;
+
             }
 
         }
 
     }
 
-    setTimeout(typeEffect,deleting?60:120);
+    setTimeout(typeEffect, deleting ? 60 : 120);
 
 }
 
 typeEffect();
 
-// =======================
-// Dark / Light Mode
-// =======================
 
-const theme = document.getElementById("theme-toggle");
+// ==========================
+// MOBILE MENU
+// ==========================
 
-theme.onclick = ()=>{
+const menuBtn = document.querySelector(".menu-btn");
 
-    document.body.classList.toggle("light-mode");
+const navLinks = document.querySelector(".nav-links");
 
-    if(document.body.classList.contains("light-mode")){
+menuBtn.addEventListener("click", () => {
 
-        theme.innerHTML =
-        '<i class="fa-solid fa-sun"></i>';
+    navLinks.classList.toggle("show");
 
-    }else{
+});
 
-        theme.innerHTML =
-        '<i class="fa-solid fa-moon"></i>';
+
+// ==========================
+// ACTIVE NAVBAR
+// ==========================
+
+const sections = document.querySelectorAll("section");
+
+const links = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const top = window.scrollY;
+
+        const offset = section.offsetTop - 150;
+
+        const height = section.offsetHeight;
+
+        if (top >= offset && top < offset + height) {
+
+            current = section.getAttribute("id");
+
+        }
+
+    });
+
+    links.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") == "#" + current) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+
+// ==========================
+// HEADER SHADOW
+// ==========================
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 60) {
+
+        header.style.boxShadow = "0 10px 30px rgba(0,0,0,.35)";
 
     }
 
-};
+    else {
 
-// =======================
-// Navbar Active Link
-// =======================
+        header.style.boxShadow = "none";
 
-const sections =
-document.querySelectorAll("section");
-
-const navLinks =
-document.querySelectorAll(".nav-links a");
-
-window.addEventListener("scroll",()=>{
-
-let current="";
-
-sections.forEach(section=>{
-
-const top=window.scrollY;
-
-const offset=section.offsetTop-200;
-
-const height=section.offsetHeight;
-
-if(top>=offset && top<offset+height){
-
-current=section.getAttribute("id");
-
-}
+    }
 
 });
 
-navLinks.forEach(link=>{
 
-link.classList.remove("active");
+// ==========================
+// SCROLL REVEAL
+// ==========================
 
-if(link.getAttribute("href")==="#"+current){
+const reveal = document.querySelectorAll(
 
-link.classList.add("active");
+".about-card,.skill-card,.project-card,.timeline-item,.intern-card,.certificate-card,.contact-box"
 
-}
-
-});
-
-});
-
-// =======================
-// Scroll Reveal Animation
-// =======================
-
-const revealElements =
-document.querySelectorAll(
-".card,.project-card,.skill,.about-box"
 );
 
-function reveal(){
+function revealElements() {
 
-revealElements.forEach(el=>{
+    const windowHeight = window.innerHeight;
 
-const windowHeight=window.innerHeight;
+    reveal.forEach(item => {
 
-const top=el.getBoundingClientRect().top;
+        const top = item.getBoundingClientRect().top;
 
-if(top<windowHeight-100){
+        if (top < windowHeight - 80) {
 
-el.style.opacity="1";
+            item.style.opacity = "1";
 
-el.style.transform="translateY(0)";
+            item.style.transform = "translateY(0)";
+
+        }
+
+    });
 
 }
+
+window.addEventListener("scroll", revealElements);
+
+reveal.forEach(item => {
+
+    item.style.opacity = "0";
+
+    item.style.transform = "translateY(40px)";
+
+    item.style.transition = ".7s";
 
 });
 
-}
+revealElements();
 
-window.addEventListener("scroll",reveal);
 
-reveal();
+// ==========================
+// BACK TO TOP BUTTON
+// ==========================
 
-// =======================
-// Scroll To Top Button
-// =======================
+const topBtn = document.createElement("button");
 
-const topBtn=document.createElement("button");
-
-topBtn.innerHTML="↑";
+topBtn.innerHTML = "↑";
 
 document.body.appendChild(topBtn);
 
-topBtn.style.position="fixed";
+topBtn.style.position = "fixed";
 
-topBtn.style.right="20px";
+topBtn.style.bottom = "25px";
 
-topBtn.style.bottom="20px";
+topBtn.style.right = "25px";
 
-topBtn.style.padding="12px 16px";
+topBtn.style.width = "50px";
 
-topBtn.style.border="none";
+topBtn.style.height = "50px";
 
-topBtn.style.borderRadius="50%";
+topBtn.style.borderRadius = "50%";
 
-topBtn.style.background="#7F5AF0";
+topBtn.style.border = "none";
 
-topBtn.style.color="white";
+topBtn.style.background = "#7F5AF0";
 
-topBtn.style.cursor="pointer";
+topBtn.style.color = "#fff";
 
-topBtn.style.display="none";
+topBtn.style.fontSize = "22px";
 
-topBtn.style.fontSize="20px";
+topBtn.style.cursor = "pointer";
 
-topBtn.style.zIndex="999";
+topBtn.style.display = "none";
 
-window.addEventListener("scroll",()=>{
+topBtn.style.zIndex = "999";
 
-if(window.scrollY>400){
+window.addEventListener("scroll", () => {
 
-topBtn.style.display="block";
+    if (window.scrollY > 500) {
 
-}else{
+        topBtn.style.display = "block";
 
-topBtn.style.display="none";
+    }
 
-}
+    else {
 
-});
+        topBtn.style.display = "none";
 
-topBtn.onclick=()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
+    }
 
 });
+
+topBtn.onclick = () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
 
 };
 
-// =======================
-// Hover Tilt Effect
-// =======================
 
-const cards=document.querySelectorAll(".project-card");
+// ==========================
+// CONTACT FORM
+// ==========================
 
-cards.forEach(card=>{
+const form = document.querySelector(".contact-form");
 
-card.addEventListener("mousemove",(e)=>{
+form.addEventListener("submit", function(e){
 
-const x=e.offsetX;
+    e.preventDefault();
 
-const y=e.offsetY;
+    alert("Thank you! Your message has been sent.");
 
-const rotateY=(-1/5*x+20);
-
-const rotateX=(1/5*y-20);
-
-card.style.transform=
-`perspective(500px)
-rotateX(${rotateX}deg)
-rotateY(${rotateY}deg)`;
+    form.reset();
 
 });
 
-card.addEventListener("mouseleave",()=>{
 
-card.style.transform="rotateX(0) rotateY(0)";
+// ==========================
+// SMOOTH SCROLL
+// ==========================
 
-});
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-});
+    anchor.addEventListener("click", function(e){
 
-// =======================
-// Contact Form
-// =======================
+        e.preventDefault();
 
-const form=document.querySelector("form");
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
 
-form.addEventListener("submit",(e)=>{
+            behavior: "smooth"
 
-e.preventDefault();
+        });
 
-alert("Thank you! Your message has been received.");
-
-form.reset();
+    });
 
 });
